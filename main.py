@@ -13,15 +13,12 @@ def count_words(text):
 
 def count_characters(text):
     text = text.lower()
-    dict = {}
-    for i in string.ascii_lowercase:
-        sum = 0
-        for j in range(len(text)):
-            if i == text[j]:
-                sum += 1
-        dict[i] = j
-    
-    return dict
+    char_count = {}
+    for char in text:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
                 
 if __name__ == "__main__":
     main()
